@@ -6,7 +6,8 @@ require 'devise-security/version'
 Gem::Specification.new do |s|
   s.name        = 'devise-security'
   s.version     = DeviseSecurity::VERSION.dup
-  s.platform    = Gem::Platform::RUBY
+  # s.platform    = Gem::Platform::RUBY
+  s.platform = RUBY_PLATFORM =~ /java/ ? 'java' : Gem::Platform::RUBY
   s.licenses    = ['MIT']
   s.summary     = 'Security extension for devise'
   s.email       = 'natebird@gmail.com'
